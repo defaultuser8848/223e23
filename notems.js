@@ -28,7 +28,7 @@ function read(pagename){
     return text;
 }
 function set(pagename, content){
-  fetch("https://note.ms/"+content, {
+  fetch("https://note.ms/"+pagename, {
     "headers": {
       "accept": "*/*",
       "accept-language": "zh-CN,zh;q=0.9",
@@ -41,7 +41,7 @@ function set(pagename, content){
       "sec-fetch-site": "same-origin",
       "x-requested-with": "XMLHttpRequest"
     },
-    "referrer": "https://note.ms/"+content,
+    "referrer": "https://note.ms/"+pagename,
     "referrerPolicy": "no-referrer-when-downgrade",
     "body": "&t="+content,
     "method": "POST",
