@@ -28,6 +28,7 @@ function read(pagename){
     return text;
 }
 function set(pagename, content){
+  content = content.replaceAll("%","%25").replaceAll("&","%26");
   fetch("https://note.ms/"+pagename, {
     "headers": {
       "accept": "*/*",
